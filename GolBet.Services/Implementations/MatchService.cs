@@ -47,5 +47,16 @@ public class MatchService : IMatchService
         return _mapper.Map<IEnumerable<MatchDto>>(matches);
 
     }
+    // GolBet.Services/Implementations/MatchService.cs  (agregar) 
+
+    public async Task<MatchDetailDto?> GetDetailAsync(int id)
+
+    {
+
+        var match = await _matchRepository.GetByIdWithDetailsAsync(id);
+
+        return match is null ? null : _mapper.Map<MatchDetailDto>(match);
+
+    }
 
 }
