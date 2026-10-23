@@ -56,7 +56,7 @@ public class MatchRepository : GenericRepository<Match>, IMatchRepository
             query = query.Where(m => m.HomeTeam.Name.Contains(term) ||
                                      m.AwayTeam.Name.Contains(term));
         }
-
+         
         return await query.OrderBy(m => m.Date).ToListAsync();
 
     }

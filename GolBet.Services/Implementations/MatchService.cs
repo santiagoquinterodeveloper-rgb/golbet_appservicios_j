@@ -22,7 +22,7 @@ public class MatchService : IMatchService
 
     public async Task<IEnumerable<MatchDto>> GetBoardAsync(MatchStatus? status = null, string? searchTerm = null) 
     {
-        var matches = await _matchRepository.GetAllWithTeamsAsync(status, searchTerm);
+        var matches = await _matchRepository.GetAllWithTeamsAsync(status, searchTerm); 
         return _mapper.Map<IEnumerable<MatchDto>>(matches);
     }
 

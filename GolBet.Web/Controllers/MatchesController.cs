@@ -30,7 +30,7 @@ public class MatchesController : Controller
         ViewBag.CurrentSearch = searchTerm;
 
         return View(board);
-    }
+    } 
 
     // GET /Matches/Detail/3
     public async Task<IActionResult> Detail(int id)

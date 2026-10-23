@@ -21,6 +21,6 @@ public interface IMatchService
     Task<MatchFormDto?> GetForEditAsync(int id);
     Task CreateAsync(MatchFormDto dto);
     Task UpdateAsync(MatchFormDto dto);
-    Task DeactivateAsync(int id);
+    Task DeactivateAsync(int id); 
 
 }
