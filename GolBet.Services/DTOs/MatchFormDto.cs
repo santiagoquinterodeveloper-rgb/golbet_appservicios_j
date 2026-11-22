@@ -60,4 +60,5 @@ public class MatchFormDto
 
     public decimal AwayOdds { get; set; } = 3.50m;
 
+
 }
